@@ -1,11 +1,43 @@
 /*@import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic");
-
-/*
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
+.headerpic {
+    transition: opacity 3s ease;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: brightness(60%);
+    filter: brightness(60%);
+    background-attachment: fixed, fixed, fixed;
+}
+
+.headerpic-show {
+    opacity: 1 !important;
+}
+
+.headerpic-son {
+    transition: opacity 3s ease;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: blur(5px) brightness(100%);
+    filter: blur(5px) brightness(100%);
+    background-attachment: fixed, fixed, fixed;
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
@@ -3063,11 +3095,19 @@ body.is-preload #header:after {
     .main.style2 {
         background-attachment: scroll;
     }
+	
+	.headerpic {
+		background-attachment: scroll;
+	}
+	
+	.headerpic-son {
+		background-attachment: scroll;
+	}
 
     /* Header */
     #header {
         padding: 5em 0 5em 0 ;
-        /*background-attachment: scroll;*/
+        background-attachment: scroll;
     }
 
     #header br {
@@ -3126,7 +3166,7 @@ body.is-preload #header:after {
     }
 
     h1 {
-        font-size: 1.75em;
+        font-size: 1.6em;
     }
 
     h2 {
@@ -3204,7 +3244,7 @@ body.is-preload #header:after {
     }
 
     #header br {
-        display: none;
+        /*display: none;*/
     }
 
     /* Footer */
