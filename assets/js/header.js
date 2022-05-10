@@ -23,8 +23,8 @@ background-image: url(images/header/group_1.png);
 	var t = document.getElementById("header");
 	var jqt = $("#header");
 	
-	var pic_list = ["group_1.min.png", "sports-meeting_3.min.png", "other_6.min.png", "other_10.min.png", "sports-meeting_1.png",
-	"sports-meeting_2.png", "group_3.min.png", "other_8.min.png", "other_9.min.png", "sports-meeting_4.min.png"];
+	var pic_list = ["group_1.min.png", "sports-meeting_5.min.png", "other_6.min.png", "other_10.min.png", "sports-meeting_1.min.png",
+	"sports-meeting_2.png", "group_3.min.png", "other_8.min.png", "other_9.min.png", "sports-meeting_4.min.png", "sports-meeting_3.min.png"];
 	
 	var build_css = function() {
 		let Script = document.createElement('style');
@@ -43,17 +43,13 @@ background-image: url(images/header/group_1.png);
 		}
 	}
 	
-	var builder = function() {
-		build_css(); build_dom();
-	}
-	
-	builder();
+	build_css(); build_dom();
 	
 	var p = 0, pp;
 	
 	var controller = function() {
 		setTimeout(function() {
-			document.getElementById("headerpic" + pp).classList.remove('headerpic-show');
+			try {document.getElementById("headerpic" + pp).classList.remove('headerpic-show')} catch {}
 		}, 3000);
 		pp = p;
 		p ++;

@@ -3,8 +3,9 @@
     <head>
         <title>青云</title>
         <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="assets/css/main.css"/>
+        <link rel="stylesheet" href="assets/css/other.css"/>
 		<link rel="shortcut icon" href="favicon.ico"/>
         <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
     </head>
@@ -13,11 +14,9 @@
         <section id="header">
             <div class="inner">
                 <span class="icon solid major"><img src="images/icon.png" alt="" style="width: 6em; height: 6em"></span>
-                <h1><strong>穷且益坚 不坠青云之志</strong><br/>上海市第二中学24届4班</h1>
-                <p>阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴<br/>阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴</p>
-                <ul class="actions special">
-                    <li><a href="#one" class="button scrolly">更多</a></li>
-                </ul>
+                <h1><strong>穷且益坚，不坠青云之志</strong><br/></h1><h2>上海市第二中学24届4班</h2>
+				<p>修篁而待彩凤，抱璞以达青云</p>
+                <ul class="actions special"><li><a class="button scrolly" onclick="$.scrollTo('#one',1000)">更多</a></li></ul>
             </div>
         </section>
         <!-- One -->
@@ -27,7 +26,7 @@
                     <div class="col-6 col-12-medium">
                         <header class="major">
                             <h2>
-                                Lorem ipsum dolor adipiscing<br/>amet dolor consequat
+                                <p>穷且益坚，不坠青云之志</p>
                             </h2>
                         </header>
                         <p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
@@ -83,7 +82,7 @@
         <section id="three" class="main style1 special">
             <div class="container">
                 <header class="major">
-                    <h2>Adipiscing amet consequat</h2>
+                    <h2>班级活动</h2>
                 </header>
                 <p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
                 <div class="row gtr-150">
@@ -128,75 +127,58 @@
         </section>
         <!-- Four -->
         <section id="four" class="main style2 special">
-            <div class="container">
-                <header class="major">
-                    <h2>Ipsum feugiat consequat?</h2>
-                </header>
-                <p>Sed lacus nascetur ac ante amet sapien.</p>
-                <ul class="actions special">
-                    <li>
-                        <a href="#" class="button wide primary">Sign Up</a>
-                    </li>
-                    <li>
-                        <a href="#" class="button wide">Learn More</a>
-                    </li>
-                </ul>
-            </div>
+			<div class="container">
+				<header class="major">
+					<h2>招贤纳士</h2>
+				</header>
+				<p>每一个星球都有一个驱动核心，每一种思想都有影响力的种子<br>感受世界的温度，你也能成为改变世界的动力<br>你的潜力，是改变世界的动力！</p>
+				<ul class="actions special">
+					<li>
+						<a href="https://zwdt.sh.gov.cn/govPortals/bsfw/item/381ba7cd-def7-4a83-af53-37d31a8e45ef" target="_blank" class="button wide primary">加入我们</a>
+					</li>
+					<li>
+						<a href="#" class="button wide">了解更多</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mask"></div>
         </section>
 
         <!-- Footer -->
         <section id="footer">
             <ul class="icons">
                 <li>
-                    <a href="#" class="icon brands alt fa-twitter">
+                    <a href="#" class="icon brands alt fa-qq">
                         <span class="label">Twitter</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="icon brands alt fa-facebook-f">
-                        <span class="label">Facebook</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="icon brands alt fa-instagram">
-                        <span class="label">Instagram</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="icon brands alt fa-github">
+                    <a href="https://github.com/Howardzhangdqs/qingyun_code" class="icon brands alt fa-github" target="_blank">
                         <span class="label">GitHub</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="icon solid alt fa-envelope">
+                    <a class="icon solid alt fa-envelope" title="zjh@shanghaiit.com" href="mailto:zjh@shanghaiit.com">
                         <span class="label">Email</span>
                     </a>
                 </li>
             </ul>
-            <ul class="copyright">
-                <li>&copy;Untitled</li>
-                <li>
-                    Design: <a href="http://html5up.net">HTML5 UP</a>
-                </li>
-            </ul>
+            <ul class="copyright"><li>&copy; 青云</li><li><a onclick="$.scrollTo('#header',1000)">上海市第二中学24届4班</a></li></ul>
         </section>
         <!-- Scripts -->
 		<script>
             option = [
                 ['CSS', "assets/css/main.css", (function() {
-                    window.setTimeout(function() {
-                        document.body.removeAttribute("class");
-                    }, 100);
-                    console.log("Main page loaded");
+                    window.setTimeout(function() { document.body.removeAttribute("class"); }, 100); console.log("Main page loaded");
                 })],
                 ['Js', 'https://cdn.staticfile.org/jquery/1.10.0/jquery.min.js', [
-                    ['Js.dependency', 'assets/js/jquery.scrolly.min.js'],
-                    ['Js.dependency', 'assets/js/browser.min.js'],
-                    ['Js.dependency', 'assets/js/breakpoints.min.js', ['Js#mainjs', 'assets/js/main.js', {fatherlist: [".dependency"]}]],
-                    ['Js.dependency', 'assets/js/util.min.js'],
-					['Js', 'assets/js/header.js']
+                    ['Js.dependency', 'assets/js/jquery.scrolly.min.js'], ['Js.dependency', 'assets/js/browser.min.js'],
+                    ['Js.dependency', 'assets/js/breakpoints.min.js', ['Js#mainjs', 'assets/js/main.min.js', {fatherlist: [".dependency"]}]],
+                    ['Js.dependency', 'assets/js/util.min.js'], ['Js', 'assets/js/header.js'],
+					['Js', 'https://cdn.staticfile.org/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js']
                 ]],
-                ['CSS', "https://cdn.staticfile.org/font-awesome/6.1.1/css/all.min.css"]
+				['Js', 'https://cdn.staticfile.org/vue/3.2.33/vue.global.min.js', function() {}],
+                ['CSS', "https://cdn.staticfile.org/font-awesome/6.1.1/css/all.min.css"],
             ];
 		</script>
         <script src="geniusload.min.js" onload="new geniusload(option)"></script>
