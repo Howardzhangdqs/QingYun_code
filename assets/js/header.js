@@ -23,7 +23,8 @@ background-image: url(images/header/group_1.png);
 	var t = document.getElementById("header");
 	var jqt = $("#header");
 	
-	var pic_list = ["group_1.png", "test1.png", "test2.png", "test3.png"];
+	var pic_list = ["group_1.min.png", "sports-meeting_3.min.png", "other_6.min.png", "other_10.min.png", "sports-meeting_1.png",
+	"sports-meeting_2.png", "group_3.min.png", "other_8.min.png", "other_9.min.png", "sports-meeting_4.min.png"];
 	
 	var build_css = function() {
 		let Script = document.createElement('style');
@@ -32,20 +33,36 @@ background-image: url(images/header/group_1.png);
 	}
 	
 	var build_dom = function() {
-		for (let i in pic_list) {
+		for (let i = 1; i <= pic_list.length; i ++) {
 			let Script = document.createElement('div');
 			Script.setAttribute('class', "headerpic");
 			Script.setAttribute('id', "headerpic" + i);
-			Script.innerHTML = "<div class='headerpic-son' style='background-image: url(images/header/" + pic_list[i] + ")'></div>";
-			Script.setAttribute('style', "background-image: url(images/header/" + pic_list[i] + ")");
+			Script.innerHTML = "<div class='headerpic-son' style='background-image: url(images/header/" + pic_list[i - 1] + ")'></div>";
+			Script.setAttribute('style', "background-image: url(images/header/" + pic_list[i - 1] + ")");
 			t.appendChild(Script);
 		}
 	}
 	
 	var builder = function() {
-		build_css();
-		build_dom();
+		build_css(); build_dom();
 	}
 	
 	builder();
+	
+	var p = 0, pp;
+	
+	var controller = function() {
+		setTimeout(function() {
+			document.getElementById("headerpic" + pp).classList.remove('headerpic-show');
+		}, 3000);
+		pp = p;
+		p ++;
+		if (p > pic_list.length) {
+			p = 0; document.getElementById("headerpic" + pp).classList.remove('headerpic-show');
+			//pic_list.sort(function(){ return Math.random() - 0.5 });
+		} else document.getElementById("headerpic" + p).classList.add('headerpic-show');
+		setTimeout(controller, 5000);
+	}
+	
+	setTimeout(controller, 4000);
 })();
