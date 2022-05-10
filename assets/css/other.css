@@ -34,7 +34,7 @@
     background-attachment: fixed, fixed, fixed;
 }
 
-#four {
+.photowall {
     background-image: url(../../images/header/other_9.min.png);
     background-attachment: fixed, fixed, fixed;
     background-size: cover;
@@ -43,11 +43,11 @@
 	padding: 0;
 }
 
-#four > .container {
-    padding: 6em 0 4em 0;
+.photowall > .container {
+    padding: 0; /* 6em 0 4em 0 */
 }
 
-#four > .mask {
+.photowall > .mask {
 	filter: blur(10px);
     content: "";
     width: 100%;
@@ -64,4 +64,10 @@
 body {
 	position: relative;
 	z-index: -1000;
+}
+
+@media screen and (max-width: 1140px) {
+    .photowall > .mask {
+        background-attachment: scroll;
+    }
 }
