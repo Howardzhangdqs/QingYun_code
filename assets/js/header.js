@@ -1,24 +1,3 @@
-/*
-<div class="headerpic" style="transition: opacity 3s ease;
-    height: 100%;
-    left: 0;
-    top: 0;
-    opacity: 1;
-    position: absolute;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: url(images/header/group_1.png);
-	-webkit-filter: blur(5px) brightness(60%);
-    filter: blur(5px) brightness(60%);
-    background-attachment: fixed, fixed, fixed;"></div>
-*/
-
-/*
-background-image: url(images/header/group_1.png);
-*/
-
 (function() {
 	var t = document.getElementById("header");
 	var jqt = $("#header");
