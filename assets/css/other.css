@@ -1,7 +1,7 @@
-.picloadjsmask {
-    filter: blur(5px);
+/*.picloadjsmask {
     -webkit-filter: blur(5px);
-}
+    filter: blur(5px);
+}*/
 
 .picloadjs {
     transition: filter 2s ease;
@@ -83,6 +83,10 @@ body {
 	text-indent: 2em;
 }
 
+.spe-col > .major {
+	text-align: right;
+}
+
 @media screen and (max-width: 1140px) {
     .photowall > .mask {
         background-attachment: scroll;
@@ -92,3 +96,11 @@ body {
 		text-indent: 0 !important;
 	}
 }
+
+@media screen and (max-width: 980px) {
+	.spe-col > .major {
+		text-align: center;
+	}
+}
+
+

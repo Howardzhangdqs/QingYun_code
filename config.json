@@ -1,0 +1,34 @@
+{
+	"activity": {
+		"data": [
+			{
+				"title": "good1",
+				"content": "bad1",
+				"pic": "images/header/other_6.min.png",
+				"date": "",
+				"link": "#"
+			},
+			{
+				"title": "good2",
+				"content": "bad2",
+				"pic": "images/header/other_10.min.png",
+				"link": "#"
+			},
+			{
+				"title": "good3",
+				"content": "bad3",
+				"pic": "images/header/other_10.min.png",
+				"link": "#"
+			}
+		],
+		"more": "了解更多",
+		"moreact": "看看更多班级活动",
+		"moreactlink": "#"
+	},
+	"text": {
+	},
+	"link": {
+		"minfo": "",
+		"enterus": "https://zwdt.sh.gov.cn/govPortals/bsfw/item/381ba7cd-def7-4a83-af53-37d31a8e45ef"
+	}
+}
