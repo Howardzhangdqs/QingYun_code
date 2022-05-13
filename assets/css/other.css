@@ -81,6 +81,7 @@ body {
 
 .para {
 	text-indent: 2em;
+	margin: 0 0 0.7em 0 !important;
 }
 
 .spe-col > .major {
