@@ -1,0 +1,105 @@
+﻿var floatObj = {
+    object: []
+
+    , left: 0
+    , top: 0
+    , interval: 30
+    , distance: 2
+    , directionX: 1
+    , directionY: 1
+    , zIndex: 100
+    , target: "_blank"
+    , cursor: "pointer"
+
+    , init: function (json) {
+        var obj = document.createElement("img");
+        //自定义
+        obj.left = parseInt(json.left || this.left);
+        obj.top = parseInt(json.top || this.top);
+        obj.interval = json.interval || this.interval;
+        obj.distance = json.distance || this.distance;
+        obj.directionX = json.directionX || this.directionX;
+        obj.directionY = json.directionY || this.directionY;
+        obj.index = this.object.length;
+        obj.url = json.url;
+        obj.target = json.target || this.target;
+
+        //事件
+        if (obj.url)
+            obj.onclick = function () {
+                switch (this.target) {
+                    case "_blank":
+                        open(this.url);
+                        break;
+                    case "_parent":
+                        parent.location = this.url;
+                        break;
+                    case "_top":
+                        top.location = this.url;
+                        break;
+                    case "_self":
+                        location = this.url;
+                        break;
+                }
+            }
+
+        if (!json.noHoverPause) {
+            obj.onmouseover = function () {
+                clearInterval(this.t);
+            }
+            obj.onmouseout = function () {
+                this.t = setInterval("floatObj.float(" + this.index + ")", this.interval);
+            }
+        }
+
+        obj.src = json.src;
+        obj.style.cursor = json.cursor || this.cursor;
+        obj.style.position = "fixed";
+        obj.style.left = obj.left + "px";
+        obj.style.top = obj.top + "px";
+        obj.style.zIndex = json.zIndex || this.zIndex;
+        obj.style.width = json.width || "";
+        obj.style.height = json.height || "";
+
+        this.object.push(obj);
+
+        document.body.appendChild(obj);
+
+        obj.t = setInterval("floatObj.float(" + obj.index + ")", obj.interval);
+    }
+    , float: function (index) {
+        var pageWidth = document.documentElement.clientWidth;
+        var pageHeight = document.documentElement.clientHeight;
+        //var scrollLeft = document.documentElement.scrollLeft;
+        //var scrollTop = document.documentElement.scrollTop;
+
+        var obj = this.object[index];
+
+        obj.left = obj.left + obj.directionX * obj.distance;
+        if (obj.left + obj.offsetWidth >= pageWidth) {
+            obj.left = pageWidth - obj.offsetWidth;
+            obj.directionX = -1;
+        }
+        else if (obj.left <= 0) {
+            obj.left = 0;
+            obj.directionX = 1;
+        }
+
+        obj.top = obj.top + obj.directionY * obj.distance;
+        if (obj.top + obj.offsetHeight >= pageHeight) {
+            obj.top = pageHeight - obj.offsetHeight;
+            obj.directionY = -1;
+        }
+        else if (obj.top <= 0) {
+            obj.top = 0;
+            obj.directionY = 1;
+        }
+
+        obj.style.left = obj.left + "px";
+        obj.style.top = obj.top + "px";
+    }
+};
+
+function float(json) {
+    floatObj.init(json);
+}
