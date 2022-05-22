@@ -72,28 +72,28 @@
         <!-- Three -->
         <section id="three" class="main style1 special">
             <div class="container">
-                <header class="major"><h2>班级活动</h2></header>
+                <header class="major"><h2>最近班级活动</h2></header>
                 <!--p>在班主任郭老师的带领下，同学们开展了一系列活动，丰富了学习生活</p-->
                 <div class="row gtr-150">
                     <div class="col-4 col-12-medium">
                         <span class="image fit"><img :src="msg.activity.data[0].pic" alt=""/></span>
-                        <h3 v-text="msg.activity.data[0].title">Loading</h3><p v-text="msg.activity.data[0].content">Loading</p>
-                        <ul class="actions special"><li><a href="#" class="button" target="_blank" v-text="msg.activity.more">Loading</a></li></ul>
+                        <h3 v-html="msg.activity.data[0].title">Loading</h3><p v-html="msg.activity.data[0].content">Loading</p>
+                        <ul class="actions special"><li><a :href="msg.activity.data[0].link" class="button" target="_blank" v-html="msg.activity.more">Loading</a></li></ul>
                     </div>
                     <div class="col-4 col-12-medium">
                         <span class="image fit"><img :src="msg.activity.data[1].pic" alt=""/></span>
-                        <h3 v-text="msg.activity.data[1].title">Loading</h3><p v-text="msg.activity.data[1].content">Loading</p>
-                        <ul class="actions special"><li><a href="#" class="button" target="_blank" v-text="msg.activity.more">Loading</a></li></ul>
+                        <h3 v-html="msg.activity.data[1].title">Loading</h3><p v-html="msg.activity.data[1].content">Loading</p>
+                        <ul class="actions special"><li><a :href="msg.activity.data[1].link" class="button" target="_blank" v-html="msg.activity.more">Loading</a></li></ul>
                     </div>
                     <div class="col-4 col-12-medium">
                         <span class="image fit"><img :src="msg.activity.data[2].pic" alt=""/></span>
-                        <h3 v-text="msg.activity.data[2].title">Loading</h3><p v-text="msg.activity.data[2].content">Loading</p>
-                        <ul class="actions special"><li><a href="#" class="button" target="_blank" v-text="msg.activity.more">Loading</a></li></ul>
+                        <h3 v-html="msg.activity.data[2].title">Loading</h3><p v-html="msg.activity.data[2].content">Loading</p>
+                        <ul class="actions special"><li><a :href="msg.activity.data[2].link" class="button" target="_blank" v-html="msg.activity.more">Loading</a></li></ul>
                     </div>
                 </div>
             </div>
             <div class="container"><ul class="actions special"><li>
-				<a :href="msg.activity.moreactlink" class="button no-padding" v-text="msg.activity.moreact">Loading</a>
+				<a :href="msg.activity.moreactlink" class="button no-padding" v-text="msg.activity.moreact" target="_blank">Loading</a>
 			</li></ul></div>
         </section>
         <!-- Four -->

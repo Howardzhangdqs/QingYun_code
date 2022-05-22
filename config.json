@@ -4,26 +4,27 @@
 			{
 				"title": "good1",
 				"content": "bad1",
-				"pic": "images/header/other_6.min.png",
+				"pic": "/images/header/other_6.min.png",
 				"date": "",
-				"link": "#"
+				"link": "/activity/#"
 			},
 			{
 				"title": "good2",
 				"content": "bad2",
-				"pic": "images/header/other_10.min.png",
-				"link": "#"
+				"pic": "http://img.videocc.net/uimage/6/627c82a616/5/627c82a616c1a16790b22b519fbced05_0_b.jpg",
+				"link": "/activity/#",
+				"m": "http://go.plvideo.cn/front/video/preview?vid=627c82a616c1a16790b22b519fbced05_6"
 			},
 			{
-				"title": "good3",
-				"content": "bad3",
-				"pic": "images/header/other_10.min.png",
-				"link": "#"
+				"title": "学习党史主题演讲",
+				"content": "8月到9月，我校针对高一新生开展“赓续红色基因 投身百年伟业”征文及演讲评比。面临众多同学的竞争，我班<a href='/us/#任思渔'>任思渔</a>、<a href='/us/#温璐宁'>温璐宁</a>同学双双荣获二等奖，脱颖而出。",
+				"pic": "/images/header/other_6.png",
+				"link": "/activity/#"
 			}
 		],
 		"more": "了解更多",
 		"moreact": "看看更多班级活动",
-		"moreactlink": "#"
+		"moreactlink": "/activity/"
 	},
 	"text": {
 	},
