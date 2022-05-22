@@ -10,7 +10,7 @@
 			for (let i = 0; i < data.length; i ++) {
 				let m;
 				if (data[i].m != undefined && data[i].m != "") {
-					m = "<iframe style='width:100%;height:338px' frameborder='no' allowfullscreen mozallowfullscreen webkitallowfullscreen src='" + data[i].m + "'></iframe>"
+					m = data[i].m;//"<iframe style='width:100%;height:338px' frameborder='no' allowfullscreen mozallowfullscreen webkitallowfullscreen src='" + data[i].m + "'></iframe>"
 				} else {
 					m = "<img src='" + data[i].pic + "' alt='' loaded='images/intro/pic_1.minn.png'/>"
 				}

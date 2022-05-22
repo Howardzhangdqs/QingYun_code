@@ -13,7 +13,7 @@
 				"content": "bad2",
 				"pic": "http://img.videocc.net/uimage/6/627c82a616/5/627c82a616c1a16790b22b519fbced05_0_b.jpg",
 				"link": "/activity/#",
-				"m": "http://go.plvideo.cn/front/video/preview?vid=627c82a616c1a16790b22b519fbced05_6"
+				"m": "<div style='width:100%;height:338px' id='plv_627c82a616c1a16790b22b519fbced05_6'></div><script>var player = polyvPlayer({  'wrap':'#plv_627c82a616c1a16790b22b519fbced05_6',  'width':'600',  'height':'333',  'vid': '627c82a616c1a16790b22b519fbced05_6'});</script>"
 			},
 			{
 				"title": "学习党史主题演讲",
