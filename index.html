@@ -27,8 +27,11 @@
         <script src="/geniusload.min.js" onload="jsl = true; if (bl) new geniusload(option)"></script>
         <script src="assets/js/picload.js"></script>
     </head>
-    <body class="is-preload" onload="bl = true; if (jsl) new geniusload(option)">
+    <body class="is-preload">
         <!-- Header -->
+		<script>
+			bl = true; if (jsl) new geniusload(option); console.log('fuck');
+		</script>
         <section id="header">
             <div class="inner">
                 <span class="icon solid major"><img src="images/icon.png" alt="" style="width: 6em; height: 6em"></span>
