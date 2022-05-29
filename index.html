@@ -15,6 +15,13 @@
                     ['Js.dependency', 'assets/js/browser.min.js'],
 					['Js', 'https://cdn.staticfile.org/jquery.lazyload/1.9.1/jquery.lazyload.min.js', function() {
 						$("img[data-original]").lazyload();
+						let plist = [];
+						$.each($("img[data-original]"), function(index, value) {
+							console.log(value.getAttribute("data-original"));//
+							var img = new Image();
+							img.src = value.getAttribute("data-original");
+							plist.push(img);
+						})
 					}],
                     ['Js.dependency', 'assets/js/breakpoints.min.js', ['Js#mainjs', 'assets/js/main.min.js', {fatherlist: [".dependency"]}]],
                     ['Js.dependency', 'assets/js/util.min.js'], ['Js', 'assets/js/header.min.js'],
