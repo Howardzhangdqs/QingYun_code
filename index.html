@@ -13,6 +13,9 @@
                 ['CSS', "/assets/css/main.css", function(){window.setTimeout(function(){document.body.removeAttribute("class")},100)}],
                 ['Js', 'https://cdn.staticfile.org/jquery/1.10.0/jquery.min.js', [
                     ['Js.dependency', 'assets/js/browser.min.js'],
+					['Js', 'https://cdn.staticfile.org/jquery.lazyload/1.9.1/jquery.lazyload.min.js', function() {
+						$("img[data-original]").lazyload();
+					}],
                     ['Js.dependency', 'assets/js/breakpoints.min.js', ['Js#mainjs', 'assets/js/main.min.js', {fatherlist: [".dependency"]}]],
                     ['Js.dependency', 'assets/js/util.min.js'], ['Js', 'assets/js/header.min.js'],
 					['Js', 'https://cdn.staticfile.org/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js']
@@ -29,7 +32,7 @@
         <!-- Header -->
         <section id="header">
             <div class="inner">
-                <span class="icon solid major"><img src="images/icon.png" alt="" style="width: 6em; height: 6em"></span>
+                <span class="icon solid major"><img data-original="images/icon.png" alt="" style="width: 6em; height: 6em"></span>
                 <h1><strong>穷且益坚，不坠青云之志</strong><br/></h1><h2>上海市第二中学24届4班</h2><p>修篁而待彩凤，抱璞以达青云</p>
                 <ul class="actions special"><li><a class="button scrolly" onclick="$.scrollTo('#one',1000)">更多</a></li></ul>
             </div>
@@ -43,7 +46,7 @@
                         <p class="para">高一四班是一个团结友爱的班级。生活委员购买了可爱的白云来捆窗帘，一扫学习中的疲惫；班前挂了块小白板，有同学分享的每日一句和学习委员的作业记录，鼓舞我们要好好学习；信息委员主动在屏幕上设置劳动安排、课表和随机抽答的相关程序……如此种种，集体的光明注入个人的小窗，我们真切地感受到了温暖和力量。</p>
                     </div>
                     <div class="col-6 col-12-medium imp-medium">
-                        <span class="image fit" style="margin: 1em 0 1em 0;"><img src="images/header/group_1.png" alt="" loaded="images/header/group_1.minn.png"/></span>
+                        <span class="image fit" style="margin: 1em 0 1em 0;"><img data-original="images/header/group_1.png" alt="" loaded="images/header/group_1.minn.png"/></span>
                     </div>
 					<p class="para">我们勤奋而质朴、诚实而勇敢。想象一下吧，2024的夏天，我们“又携书剑路茫茫”；2025的夏天，我们“却笑人间举子忙”。</p>
 					<p class="para"><b>我们不相信，“北海虽赊，扶摇可接”是昨天的神话；</b></p>
@@ -57,7 +60,7 @@
                 <header class="major" style="text-align:center;margin: 0 0 2em 0"><h2>班级特色</h2></header>
                 <div class="row gtr-150">
                     <div class="col-6 col-12-medium"><ul class="major-icons"><li><span class="image fit">
-						<img src="images/flag.png" alt="" loaded="images/flag.minn.png"/>
+						<img data-original="images/flag.png" alt="" loaded="images/flag.minn.png"/>
 					</span></li></ul></div>
                     <div class="col-6 col-12-medium">
                         <header class="major"><h3>班徽与口号</h3></header>
@@ -70,12 +73,12 @@
                         <p class="para">为巩固学习习惯与氛围，我班组织召开班委会再次完善了自己的班规，并采用了“结对子”与“小老师”的学习方式，学习氛围极度浓郁，上课积极互动，上公开课时，许多老师常常会选择我班。</p>
                     </div>
                     <div class="col-6 col-12-medium"><ul class="major-icons"><li><span class="image fit">
-						<img src="images/intro/pic_1.png" alt="" loaded="images/intro/pic_1.minn.png"/>
+						<img data-original="images/intro/pic_1.png" alt="" loaded="images/intro/pic_1.minn.png"/>
 					</span></li></ul></div>
                 </div>
                 <div class="row gtr-150">
                     <div class="col-6 col-12-medium"><ul class="major-icons"><li><span class="image fit">
-						<img src="images/intro/pic_2.png" alt="" loaded="images/intro/pic_2.png"/>
+						<img data-original="images/intro/pic_2.png" alt="" loaded="images/intro/pic_2.png"/>
 					</span></li></ul></div>
                     <div class="col-6 col-12-medium">
                         <header class="major"><h3>其他</h3></header>
