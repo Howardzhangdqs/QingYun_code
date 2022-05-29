@@ -4,7 +4,7 @@
         <title>青云</title>
         <meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <link rel="stylesheet" href="assets/css/main.css"/>
+        <link rel="stylesheet" href="assets/css/main.css" onload=""/>
         <link rel="stylesheet" href="assets/css/other.css"/>
 		<link rel="shortcut icon" href="favicon.ico"/>
         <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
@@ -95,19 +95,20 @@
                     <div class="col-4 col-12-medium">
                         <span class="image fit"><img :src="msg.activity.data[0].pic" alt=""/></span>
                         <h3 v-html="msg.activity.data[0].title">Loading</h3><p v-html="msg.activity.data[0].content">Loading</p>
-                        <ul class="actions special"><li><a :href="msg.activity.data[0].link" class="button" target="_blank" v-html="msg.activity.more">Loading</a></li></ul>
+                        <ul class="actions special"><li><a href="/activity/#act0" class="button" target="_blank" v-html="msg.activity.more">Loading</a></li></ul>
                     </div>
                     <div class="col-4 col-12-medium">
                         <span class="image fit"><img :src="msg.activity.data[1].pic" alt=""/></span>
                         <h3 v-html="msg.activity.data[1].title">Loading</h3><p v-html="msg.activity.data[1].content">Loading</p>
-                        <ul class="actions special"><li><a :href="msg.activity.data[1].link" class="button" target="_blank" v-html="msg.activity.more">Loading</a></li></ul>
+                        <ul class="actions special"><li><a href="/activity/#act1" class="button" target="_blank" v-html="msg.activity.more">Loading</a></li></ul>
                     </div>
                     <div class="col-4 col-12-medium">
                         <span class="image fit"><img :src="msg.activity.data[2].pic" alt=""/></span>
                         <h3 v-html="msg.activity.data[2].title">Loading</h3><p v-html="msg.activity.data[2].content">Loading</p>
-                        <ul class="actions special"><li><a :href="msg.activity.data[2].link" class="button" target="_blank" v-html="msg.activity.more">Loading</a></li></ul>
+                        <ul class="actions special"><li><a href="/activity/#act2" class="button" target="_blank" v-html="msg.activity.more">Loading</a></li></ul>
                     </div>
                 </div>
+                <p>丰富的课余活动，给我们的不止“羌声色兮娱人”的片刻欢愉。青云衣，白霓裳，让我们意识到，生活与学习不只是一次次辛劳的“举长矢兮射天狼”，在杳冥冥的远处，还有东君，还有扶桑。</p>
             </div>
             <div class="container"><ul class="actions special"><li>
 				<a :href="msg.activity.moreactlink" class="button no-padding" v-text="msg.activity.moreact" target="_blank">Loading</a>
