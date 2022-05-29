@@ -2,21 +2,47 @@
 	"activity": {
 		"data": [
 			{
-				"title": "good1",
-				"content": "bad1",
-				"pic": "/images/header/other_6.min.png",
+				"title": "携手跨越沟通鸿沟 建立良好亲子关系：线上主题班会",
+				"content": "2022年5月6日下午，为增进家长学生间亲子关系，交流亲子沟通方法，我班的班会课特邀家长，共同开展“携手跨越沟通鸿沟，建立良好亲子关系”线上主题班会。期间，教师、家长和同学都打开了摄像头，多位同学和家长积极参与，氛围良好。",
+				"pic": "/images/intro/2022050601.png",
 				"date": "",
-				"link": "/activity/#"
+				"link": "https://mp.weixin.qq.com/s/HqjU2eP19v2YfgxYPTEu7w"
 			},
 			{
-				"title": "good2",
-				"content": "bad2",
+				"title": "我见证中国力量：五四青年节朗读亭特别活动",
+				"content": "2022年5月4日，五四运动103周年。五四风雷，激荡百年，青春之火，赓续长存。我班<a href='/us/#周津仕'>周津仕</a>同学参加了线上朗读亭活动，声情并茂地朗诵了《致大上海——献给抗疫中的人们》一文。",
+				"pic": "",
+				"date": "",
+				"link": "https://mp.weixin.qq.com/s/fSOSIElCDrgcyrqZCorTTA"
+			},
+			{
+				"title": "魅力青春 舞梦飞扬：艺术节舞蹈专场",
+				"content": "2021年12月21日，市二艺术节盛大开幕，我班多位同学积极参与。<a href='/us/#张伊容'>张伊容</a>同学主持，<a href='/us/#罗怡霖'>罗怡霖</a>、<a href='/us/#齐欣怡'>齐欣怡</a>、<a href='/us/#张煜琀'>张煜琀</a>、<a href='/us/#金品希'>金品希</a>、<a href='/us/#李予心'>李予心</a>同学表演舞蹈《莫问归期》。“来如雷霆收震怒，罢如江海凝清光。”是她们简劲的挥袖。“仿佛兮若轻云之蔽月，飘飖兮若流风之回雪。”是她们婉娩的转身。歧路的桑树、影绰的莲舟、溪头的慈母，依稀眼前——正所谓三顾为游子，一扇掩江南。",
 				"pic": "http://img.videocc.net/uimage/6/627c82a616/5/627c82a616c1a16790b22b519fbced05_0_b.jpg",
-				"link": "/activity/#",
-				"m": "<div style='width:100%;height:338px' id='plv_627c82a616c1a16790b22b519fbced05_6'></div><script>var player = polyvPlayer({  'wrap':'#plv_627c82a616c1a16790b22b519fbced05_6',  'width':'600',  'height':'333',  'vid': '627c82a616c1a16790b22b519fbced05_6'});</script>"
+				"link": "https://mp.weixin.qq.com/s/yTT8m2RVyCOq3IH2UT9d7Q",
+				"m": "<iframe style='width:100%;height:338px' src='video_player.html?627c82a616c1a16790b22b519fbced05_6' fix_size='864 480' onload='adjust_size()'></iframe>"
 			},
 			{
-				"title": "学习党史主题演讲",
+				"title": "“声”入人心 与角色融为一体：艺术节配音专场",
+				"content": "2021年12月17日，同学们虽然都裹上了厚厚的冬季校服，但对于艺术节配音专场的热情却是非常的高涨。我班配音内容为《罗小黑战记》。主角的声音一发出，台下的同学们甚至以为是原声。他们声音洪亮、气势威武、抑扬顿挫，把或激烈或平静的对白展现得淋漓尽致。视频的结尾处十分感人，配音的哭腔恰到好处，台下的同学们禁不住热泪盈眶。最终我班同学荣获二等奖。",
+				"pic": "http://img.videocc.net/uimage/6/627c82a616/6/627c82a616c9fdf40156fb608d41f076_0_b.jpg",
+				"link": "https://mp.weixin.qq.com/s/wcCJMkx6p5hLjIZ0zJomXA",
+				"m": "<iframe style='width:100%;height:338px' src='video_player.html?627c82a616c9fdf40156fb608d41f076_6' fix_size='1280 720' onload='adjust_size()'></iframe>"
+			},
+			{
+				"title": "传务本精神 做合格市二人：高一年级红色校史教育",
+				"content": "2021年11月5日，已经在市二校园里生活了两个月的高一新生，在马强副书记的带领下，一起回望这所已有将近一百二十岁的学校。同学们在聆听后纷纷写下自己的感言。",
+				"pic": "/images/intro/2021110501.jpg",
+				"link": "https://mp.weixin.qq.com/s/oecpQFRJNyLrHF0qicfRCA"
+			},
+			{
+				"title": "传务本精神 做合格市二人：高一年级红色校史教育",
+				"content": "2021年9月26日下午，为提升学生科技素养，丰富科技知识储备，上海市徐汇区青少年活动中心、上海市业余科技学院与上海市第二中学合作开展了一个面向高一全体学生的科技讲座，邀请到了上海电力大学校长李和兴教授担任主讲，讲座标题为《改变世界的太阳能科技》。我班佘轶舟和蒋奕铭同学，在演讲结束后，向李和兴教授提出了自己的一些困惑，并和教授合影留念。",
+				"pic": "/images/intro/2021092601.jpg",
+				"link": "https://mp.weixin.qq.com/s/GkPMVpty7_nb6lBI5Ztrww"
+			},
+			{
+				"title": "赓续红色基因 投身百年伟业：学习党史主题演讲",
 				"content": "8月到9月，我校针对高一新生开展“赓续红色基因 投身百年伟业”征文及演讲评比。面临众多同学的竞争，我班<a href='/us/#任思渔'>任思渔</a>、<a href='/us/#温璐宁'>温璐宁</a>同学双双荣获二等奖，脱颖而出。",
 				"pic": "/images/header/other_6.png",
 				"link": "/activity/#"
