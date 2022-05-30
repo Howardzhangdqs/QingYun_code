@@ -8,50 +8,50 @@
         <link rel="stylesheet" href="../assets/css/other.css"/>
 		<link rel="shortcut icon" href="../favicon.ico"/>
         <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
+		<style>
+			.button {
+				text-transform: none !important;
+			}
+		</style>
     </head>
     <body class="is-preload">
         <!-- One -->
         <section id="one" class="main style1 special">
-            <div class="container">
-                <div class="row gtr-150">
-                    <div class="col-12-medium" style="width:100%">
-                        <header class="major"><h2>青云开放平台</h2></header>
-                        <p style="width:100%"><b>修篁而待彩凤，抱璞以达青云</b></p>
-                    </div>
-                </div>
-            </div>
+            <div class="container"><div class="row gtr-150"><div class="col-12-medium" style="width:100%">
+                <header class="major"><h2>青云<i class="fas fa-bug"></i>开放平台</h2></header>
+                <p style="width:100%"><b>修篁而待彩凤，抱璞以达青<i class="fas fa-cloud"></i></b></p>
+            </div></div></div>
         </section>
         <!-- Two -->
         <!-- Three -->
         <section id="three" class="main style2 special" style="background-image:none">
             <div class="container">
-                <header class="major"><h2>一些项目</h2></header>
-                <!--p>在班主任郭老师的带领下，同学们开展了一系列活动，丰富了学习生活</p-->
+                <header class="major"><h2>一些项目<i class="fas fa-code"></i></h2></header>
                 <div class="row gtr-150">
                     <div class="col-4 col-12-medium">
-                        <span class="image fit"><img :src="msg.activity.data[0].pic" alt=""/></span>
-                        <h3>Loading</h3><p>Loading</p>
-                        <ul class="actions special"><li><a href="#" class="button" target="_blank">Loading</a></li></ul>
+						<h3>BGsys <i class="fas fa-code-branch"></i></h3>
+                        <span class="image fit"><img src="/images/intro/pic_2.png" alt=""/></span>
+                        <p>更好的利用您班级里的希沃电脑 <i class="fas fa-desktop"></i></p>
+                        <ul class="actions special"><li><a href="https://github.com/Howardzhangdqs/BGsys" class="button" target="_blank"><i class="fa fa-link"></i> View on <i class="fab fa-github"></i></a></li></ul>
                     </div>
                     <div class="col-4 col-12-medium">
-                        <span class="image fit"><img :src="msg.activity.data[1].pic" alt=""/></span>
-                        <h3>Loading</h3><p>Loading</p>
-                        <ul class="actions special"><li><a href="#" class="button" target="_blank">Loading</a></li></ul>
+						<h3>这个网站 <i class="fas fa-code-branch"></i></h3>
+                        <span class="image fit"><img src="/images/preview.png" alt=""/></span>
+                        <p>没啥好介绍的</p>
+                        <ul class="actions special"><li><a href="https://github.com/Howardzhangdqs/QingYun_code" class="button" target="_blank"><i class="fa fa-link"></i> View on <i class="fab fa-github"></i></a></li></ul>
                     </div>
                     <div class="col-4 col-12-medium">
-                        <span class="image fit"><img :src="msg.activity.data[2].pic" alt=""/></span>
-                        <h3>Loading</h3><p>Loading</p>
-                        <ul class="actions special"><li><a href="#" class="button" target="_blank">Loading</a></li></ul>
+						<h3>字符串播放器 <i class="fas fa-code-branch"></i></h3>
+                        <span class="image fit"><img src="/images/intro/String-player.jpg" alt=""/></span>
+                        <p>把视频变为字符动画的神器</p>
+                        <ul class="actions special"><li><a href="https://github.com/SFKgroup/String-player" class="button" target="_blank"><i class="fa fa-link"></i> View on <i class="fab fa-github"></i></a></li></ul>
                     </div>
                 </div>
             </div>
-            <div class="container"><ul class="actions special"><li>
-				<a :href="msg.activity.moreactlink" class="button no-padding">Loading</a>
-			</li></ul></div>
         </section>
         <section id="two" class="main style1 special" style="background-image:none">
             <div class="container">
-                <header class="major" style="text-align:center;margin: 0 0 2em 0"><h2>主要成员</h2></header>
+                <header class="major" style="text-align:center;margin: 0 0 2em 0"><h2>主要成员<i class="fas fa-users"></i></h2></header>
                 <div class="row gtr-150">
                     <div class="col-6 col-12-medium"><ul class="major-icons"><li><span class="image fit">
 						<img src="../images/header/group_1.png" alt="" loaded="../images/header/group_1.minn.png"/>
@@ -100,17 +100,18 @@
 		<script>
 			var data = undefined;
             var option = [
-                ['CSS', "../assets/css/main.css", function(){window.setTimeout(function(){document.body.removeAttribute("class")},100)}],
+                ['CSS', "/assets/css/main.css", function(){window.setTimeout(function(){document.body.removeAttribute("class")},100)}],
                 ['Js', 'https://cdn.staticfile.org/jquery/1.10.0/jquery.min.js', [
-                    ['Js.dependency', '../assets/js/browser.min.js'],
-                    ['Js.dependency', '../assets/js/breakpoints.min.js', ['Js#mainjs', '../assets/js/main.min.js', {fatherlist: [".dependency"]}]],
-                    ['Js.dependency', '../assets/js/util.min.js'],
+                    ['Js.dependency', '/assets/js/browser.min.js'],
+                    ['Js.dependency', '/assets/js/breakpoints.min.js', ['Js#mainjs', '../assets/js/main.min.js', {fatherlist: [".dependency"]}]],
+                    ['Js.dependency', '/assets/js/util.min.js'],
 					['Js', 'https://cdn.staticfile.org/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js']
                 ]], ['Js', 'https://cdn.staticfile.org/vue/2.6.9/vue.min.js', ['Js', 'https://cdn.staticfile.org/axios/0.27.2/axios.min.js']],
-				['CSS', "https://cdn.staticfile.org/font-awesome/6.1.1/css/all.min.css"], ['Js', 'https://cdn.staticfile.org/echarts/5.3.2/echarts.min.js']
+				['CSS', "https://cdn.staticfile.org/font-awesome/5.15.4/css/all.min.css"],
+				['Js', 'https://cdn.staticfile.org/echarts/5.3.2/echarts.min.js']
             ];
 		</script>
-        <script src="../geniusload.min.js" onload="new geniusload(option)"></script>
-        <script src="../assets/js/picload.js"></script>
+        <script src="/geniusload.min.js" onload="new geniusload(option)"></script>
+        <script src="/assets/js/picload.js"></script>
     </body>
 </html>
