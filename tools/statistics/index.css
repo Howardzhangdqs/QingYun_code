@@ -1,0 +1,55 @@
+body {
+    font-family: Consolas;
+}
+
+.no-list {
+    display: flex;
+}
+
+.no-content {
+    width: 30%;
+}
+
+.no-num {
+    width: 100%;
+}
+
+.no-name {
+    border: 1px solid;
+    padding: 0px 0.25em;
+    margin: 0 0.25em 0 0;
+    transition: background 0.5s ease 0s;
+    cursor: pointer;
+}
+
+.no-name:hover {
+    background: rgba(0, 0, 0, 0.133);
+}
+
+.no-err {
+    color: #f00;
+}
+
+.no-numlist {
+    display: block;
+}
+
+.fa-minus-square::before {
+    color: #f00;
+}
+
+.fa-plus-square::before {
+    color: rgb(0 185 0);
+}
+
+.bt-clear {
+    color: #f00;
+}
+
+button {
+    cursor: pointer;
+}
+
+.no-big-list {
+    margin: 0.9em 0px;
+}

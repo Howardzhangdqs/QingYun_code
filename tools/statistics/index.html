@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>缺交作业记录表</title>
+        <script src="util.js" type="text/javascript"></script>
+		<script>
+            var option = [
+                ['Js', 'https://cdn.staticfile.org/jquery/1.10.0/jquery.min.js', ['Js.dependency', 'build.js', function() {
+					builder(["语文", "数学", "英语", "物理", "化学", "生物", "政治", "历史", "地理", "信息", "劳技"]);
+				}]], ['Js', 'util.js'], ['CSS', "index.css"],
+				['CSS', "https://cdn.staticfile.org/font-awesome/5.15.4/css/all.min.css"],
+            ];
+		</script>
+        <script src="geniusload.min.js" onload="new geniusload(option)"></script>
+    </head>
+    <body>
+		<button class="bt-clear" onclick="data_clear()">数据清空</button>
+		<button class="" id="bt-save" onclick="data_save()">浏览器localStorage保存</button>
+		<button class="" id="bt-export" onclick="data_save();data_export()">记录表导出</button>
+		<div class="container" id="container">
+			Loading
+			<section id="template">
+				<h2><span>name</span> <button onclick="$($(this).parents().parents()[0]).append(template_ls)">添加 <i class="far fa-plus-square"></i></button></h2>
+				<div class="no-big-list">
+					<div class="no-list no-input">
+						<!--input type="checkbox"/-->
+						<input class="no-content" oninput="bt_save()" placeholder="内容"/>
+						<input class="no-num" oninput="bt_save();analyze($(this))" placeholder="学号"/>
+						<button style="width:8em" onclick="$($(this).parents().parents()[0]).remove()">删除 <i class="far fa-minus-square"></i></button>
+					</div>
+					<div class="no-numlist no-list"></div>
+				</div>
+			</section>
+		</div>
+		<script>
+			window.onload = function() {
+			}
+		</script>
+    </body>
+</html>
