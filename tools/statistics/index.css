@@ -65,3 +65,9 @@ tr[role="row"] {
 tr[role="row"] > td:last-child {
 	text-align: left;
 }
+
+#tx-output {
+	display: none;
+	width: 100%;
+	height: 100px;
+}

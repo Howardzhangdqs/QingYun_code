@@ -87,12 +87,15 @@ var data_cpy = function(f) {
 		cpydata.push(tl.join("\t").replace(/<br>/g, " | "));
 	}
 	cpydata = cpydata.join("\n");
+	$("#tx-output").val(cpydata);
 	navigator.clipboard.writeText(cpydata).then(function() {
 		$("#bt-cpy").text("复制成功"), $("#bt-cpy").css("color", "#00b900");
 		setTimeout(function() { $("#bt-cpy").text("复制"), $("#bt-cpy").css("color", "#000") }, "1000");
 	}).catch(function() {
 		$("#bt-cpy").text("复制失败"), $("#bt-cpy").css("color", "#f00");
 		setTimeout(function() { $("#bt-cpy").text("复制"), $("#bt-cpy").css("color", "#000") }, "1000");
+		$("#tx-output").css("display", "block");
+		$("#tx-output").select()
 	})
 }
 
