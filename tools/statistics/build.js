@@ -40,7 +40,7 @@ var num_list = {
 
 var analyze_formatter = function(cla, err, s, o) {
 	return ('<span class="no-name' + (cla ? (" " + cla) : "") + '" h-data="' + o +
-	'" onclick="analyze_del($(this))">' + (err ? (err + " ") : "") + s + ' <i class="far fa-minus-square"></i></span>');
+	'" onclick="analyze_del($(this));bt_save()">' + (err ? (err + " ") : "") + s + ' <i class="far fa-minus-square"></i></span>');
 }
 
 var analyze = function($t) {

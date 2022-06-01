@@ -53,3 +53,15 @@ button {
 .no-big-list {
     margin: 0.9em 0px;
 }
+
+.tb-container {
+	margin: 1em;
+}
+
+tr[role="row"] {
+	text-align: center
+}
+
+tr[role="row"] > td:last-child {
+	text-align: left;
+}
