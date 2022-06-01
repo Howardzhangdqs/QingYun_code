@@ -94,7 +94,7 @@ var data_save = function() {
 }
 
 var data_loadin = function() {
-	$("#bt-save").text("导入中");
+	$("#bt-save").text("数据导入中");
 	
 	let data = JSON.parse(_.storage.get("statistics_index_data"));
 	
@@ -116,7 +116,3 @@ var data_loadin = function() {
 }
 
 var bt_save = new Function('$("#bt-save").text("未保存"); $("#bt-save").css("color", "#f00")');
-
-var data_export = function() {
-	
-}

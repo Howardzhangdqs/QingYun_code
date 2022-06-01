@@ -46,8 +46,10 @@ var data_process = function(f) {
 	
 	for (let i = 1; i <= TOTN; i ++) {
 		let pd = data[i];
-		if (f) {if (pd.name) tb_data.push(["" + i, pd.name, pd.times, (pd.con).join("<br>")])}
-		else if (pd.times != 0) tb_data.push(["" + i, pd.name, pd.times, (pd.con).join("<br>")])
+		if (f) {
+			if (pd.name) tb_data.push(["" + i, pd.name, pd.times, (pd.con).join("<br>")]);
+			else tb_data.push(["" + i, "", "", ""]);
+		} else if (pd.times != 0) tb_data.push(["" + i, pd.name, pd.times, (pd.con).join("<br>")])
 	}
 	
 	console.log(data);
@@ -67,24 +69,34 @@ var data_export = function(f) {
 			"paginate": { "sFirst": "首页", "sPrevious": "前一页", "sNext": "后一页", "sLast": "尾页" },
 			"sZeroRecords": "没有检索到数据"
 		},
-		"columnDefs": [{"targets": [0], "sType": "h-numsort" }], "paging": false
+		"columnDefs": [
+			{"targets": [0], "sType": "h-numsort" },
+			{"targets": [0], "className": "dt-hc1" }, {"targets": [1], "className": "dt-hc2" },
+			{"targets": [2], "className": "dt-hc3" }, {"targets": [3], "className": "dt-hc4" }
+		], "paging": false
 	});
 	$("#tb-datatable").css("width", "100%");
 }
 
 var data_cpy = function(f) {
 	let cpydata = [];
-	for (let i in tb_data) cpydata.push(tb_data[i].join("\t").replace(/<br>/g, " | "));
+	for (let i in tb_data) {
+		let tl = [];
+		if ($("#cpy-cb1").is(':checked')) tl.push(tb_data[i][0]); if ($("#cpy-cb2").is(':checked')) tl.push(tb_data[i][1]);
+		if ($("#cpy-cb3").is(':checked')) tl.push(tb_data[i][2]); if ($("#cpy-cb4").is(':checked')) tl.push(tb_data[i][3]);
+		cpydata.push(tl.join("\t").replace(/<br>/g, " | "));
+	}
 	cpydata = cpydata.join("\n");
 	navigator.clipboard.writeText(cpydata).then(function() {
 		$("#bt-cpy").text("复制成功"), $("#bt-cpy").css("color", "#00b900");
-		setTimeout(function() {
-			$("#bt-cpy").text("复制"), $("#bt-cpy").css("color", "#000");
-		}, "1000");
+		setTimeout(function() { $("#bt-cpy").text("复制"), $("#bt-cpy").css("color", "#000") }, "1000");
 	}).catch(function() {
 		$("#bt-cpy").text("复制失败"), $("#bt-cpy").css("color", "#f00");
-		setTimeout(function() {
-			$("#bt-cpy").text("复制"), $("#bt-cpy").css("color", "#000");
-		}, "1000");
+		setTimeout(function() { $("#bt-cpy").text("复制"), $("#bt-cpy").css("color", "#000") }, "1000");
 	})
+}
+
+var data_hs = function(n) {
+	if ($("#cpy-cb" + n).is(':checked')) $(".dt-hc" + n).css("display", 'table-cell');
+	else $(".dt-hc" + n).css("display", 'none');
 }
