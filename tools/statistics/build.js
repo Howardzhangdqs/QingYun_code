@@ -1,4 +1,4 @@
-var $template, template_ls;
+var $template, template_ls, date_target;
 var builder = function(ls) {
 	$template = $("<section>" + $("#template").html() + "</section>");
 	template_ls = "<div class='no-big-list'>" + $template.children("div").html() + "</div>";
@@ -88,7 +88,7 @@ var data_save = function() {
 		});
 	});
 	console.log(data);
-	_.storage.set("statistics_index_data", JSON.stringify(data));
+	_.storage.set("statistics_index_data" + date_target, JSON.stringify(data));
 	
 	$("#bt-save").css("color", "rgb(0, 185, 0)"); $("#bt-save").text("保存成功");
 }
@@ -96,7 +96,15 @@ var data_save = function() {
 var data_loadin = function() {
 	$("#bt-save").text("数据导入中");
 	
-	let data = JSON.parse(_.storage.get("statistics_index_data"));
+	let th = window.location.href.split("?")[1], data;
+	if (th) date_target = th;
+	else date_target = (new Date()).format("YYMMDD");
+	
+	data = JSON.parse(_.storage.get("statistics_index_data" + date_target));
+	
+	if (! data) {
+		$("#bt-save").css("color", "#f00"); $("#bt-save").text("无法读取到当日数据"); return;
+	}
 	
 	console.log(data);
 	
