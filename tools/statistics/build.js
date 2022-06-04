@@ -88,7 +88,9 @@ var data_save = function() {
 		});
 	});
 	console.log(data);
-	_.storage.set("statistics_index_data" + date_target, JSON.stringify(data));
+	let tdata = JSON.parse(_.storage.get("statistics_index_data")) || {};
+	tdata[date_target] = data;
+	_.storage.set("statistics_index_data", JSON.stringify(tdata));
 	
 	$("#bt-save").css("color", "rgb(0, 185, 0)"); $("#bt-save").text("保存成功");
 }
@@ -100,12 +102,13 @@ var data_loadin = function() {
 	if (th) date_target = th;
 	else date_target = (new Date()).format("YYMMDD");
 	
-	data = JSON.parse(_.storage.get("statistics_index_data" + date_target));
+	data = JSON.parse(_.storage.get("statistics_index_data"));
 	
-	if (! data) {
+	if (! data || ! data[date_target]) {
 		$("#bt-save").css("color", "#f00"); $("#bt-save").text("无法读取到当日数据"); return;
 	}
 	
+	data = data[date_target];
 	console.log(data);
 	
 	$.each($("#container").children(), function(key, val) {

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="../util.js"></script>
+        <script type="text/javascript" src="calendarize.js"></script>
+        <title>作业统计总表</title>
+    </head>
+    <body>
+        <h1 style="margin: 1em auto 1em auto; text-align:center">作业统计总表</h1>
+		<button onclick="select_date()" id="select-date">选择查询区间</button>
+        <div id="lastyear-calendar"></div><div id="calendar"></div>
+        <script type="text/javascript">
+            var currentYear = new Date().getFullYear();
+            var calendarize = new Calendarize();
+			var data = JSON.parse(_.storage.get("statistics_index_data")) || {};
+			
+			var onselect_date = false, onselect_date_ = false, onselect_dates;
+			
+			$(function() {
+				calendarize.buildYearCalendar(document.getElementById("calendar"), currentYear, deal_);
+				calendarize.buildYearCalendar(document.getElementById("lastyear-calendar"), currentYear - 1, deal_);
+			});
+			
+			var deal_ = function(e) {
+				if (! onselect_date) window.open("../index.html?" + $(e.target).attr("data-date"));
+				else if (onselect_date && ! onselect_date_) {
+					onselect_date = true; onselect_date_ = true; $("#select-date").text("请选择结束日期");
+					onselect_dates = $(e.target).attr("data-date");
+					$(e.target).addClass("on-select");
+				} else {
+					onselect_date = false; onselect_date_ = false;
+					$("#select-date").text("选择查询区间");
+					if (parseInt(onselect_dates) < parseInt($(e.target).attr("data-date")))
+						window.open("weekly.html?" + onselect_dates + "-" + $(e.target).attr("data-date"));
+					else {
+						$("#select-date").text("请注意日期顺序"), $("#select-date").css("color", "#f00");
+						setTimeout(function() { $("#select-date").text("选择查询区间"), $("#select-date").css("color", "#000") }, "1000");
+					}
+					$(".on-select").removeClass("on-select");
+				}
+			}
+        </script>
+    </body>
+</html>
