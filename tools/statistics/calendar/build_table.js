@@ -120,6 +120,7 @@ var data_export = function(f) {
 		], "paging": false
 	});
 	$("#tb-datatable").css("width", "100%");
+	$("[aria-describedby]").addClass("display")
 }
 
 var data_cpy = function(f) {
