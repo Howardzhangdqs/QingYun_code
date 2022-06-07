@@ -73,7 +73,7 @@ var data_clear = function() {
 	bt_save();
 }
 
-var data_save = function() {
+var data_save = function(showtext) {
 	$("#bt-save").text("保存中");
 	
 	let data = {};
@@ -92,7 +92,7 @@ var data_save = function() {
 	tdata[date_target] = data;
 	_.storage.set("statistics_index_data", JSON.stringify(tdata));
 	
-	$("#bt-save").css("color", "rgb(0, 185, 0)"); $("#bt-save").text("保存成功");
+	$("#bt-save").css("color", "rgb(0, 185, 0)"); $("#bt-save").text(showtext ? showtext : "保存成功");
 }
 
 var data_loadin = function() {
@@ -127,3 +127,5 @@ var data_loadin = function() {
 }
 
 var bt_save = new Function('$("#bt-save").text("未保存"); $("#bt-save").css("color", "#f00")');
+
+setInterval("data_save('自动保存成功')", 10000);
