@@ -38,7 +38,7 @@ var data_process = function(f) {
 				let tv = analyze_data_process(vl);
 				for (let i in tv) {
 					data[i].times ++;
-					data[i].con.push(title + " - " + ($v.children(".no-content").val() ? $v.children(".no-content").val() : "未定义"));
+					data[i].con.push(title + ($v.children(".no-content").val() ? " - " + $v.children(".no-content").val() : ""));
 				}
 			}
 		});
