@@ -80,7 +80,7 @@ var data_process = function(f) {
 					let tv = analyze_data_process(d[key][j][l][1]);
 					for (let k in tv) {
 						data[k].times ++;
-						data[k].con.push("20" + i + " " + j + " - " + (d[key][j][l][0] ? d[key][j][l][0] : "未定义"));
+						data[k].con.push("20" + i + " " + j + (d[key][j][l][0] ? " - " + d[key][j][l][0] : ""));
 					}
 				}
 			}
@@ -120,7 +120,7 @@ var data_export = function(f) {
 		], "paging": false
 	});
 	$("#tb-datatable").css("width", "100%");
-	$("[aria-describedby]").addClass("display")
+	$("[aria-describedby]").addClass("display");
 }
 
 var data_cpy = function(f) {
