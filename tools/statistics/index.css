@@ -71,3 +71,7 @@ tr[role="row"] > td:last-child {
 	width: 100%;
 	height: 100px;
 }
+
+.no-input > * {
+	margin: 1em
+}

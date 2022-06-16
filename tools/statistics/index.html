@@ -54,9 +54,9 @@
 				<div class="no-big-list">
 					<div class="no-list no-input">
 						<!--input type="checkbox"/-->
+						<button style="width:8em" onclick="$($(this).parents().parents()[0]).remove();bt_save()">删除 <i class="far fa-minus-square"></i></button>
 						<input class="no-content" oninput="bt_save()" placeholder="内容"/>
 						<input class="no-num" oninput="bt_save();analyze($(this))" placeholder="学号"/>
-						<button style="width:8em" onclick="$($(this).parents().parents()[0]).remove();bt_save()">删除 <i class="far fa-minus-square"></i></button>
 					</div>
 					<div class="no-numlist no-list"></div>
 				</div>
