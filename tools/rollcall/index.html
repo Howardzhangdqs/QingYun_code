@@ -119,13 +119,14 @@
 					$("#table-container").append(domstr.template.table.replace("{{classid}}", d[0]));
 					$("[h-classid=" + d[0] + "] > tbody").append("<tr></tr>".times(5));
 					for (let i = 1; i < d.length; i ++) {
-						$("[h-classid=" + d[0] + "] > tbody > tr:nth-child(" + (Math.floor((i - 1) / 10) + 1) + ")")
+						let d = (Math.floor((i - 1) / 10) + 1); d = (d > 5 ? 5 : d);
+						$("[h-classid=" + d[0] + "] > tbody > tr:nth-child(" + d + ")")
 							.append("<td>" + d[0] + "</br>" + d[i].split(" ").slice(0, 2).join(" ") + "</td>");
 					}
 				}
 				console.log(data);
 				$("[h-classid=" + data[0][0] + "]").addClass("selected");
-				let domhtml = _.storage.get("rollcall_store_html");
+				let domhtml = _.storage.get("rollcall_store_html_" + window.location.search.replace("?", ""));
 				if (domhtml) $("#table-container").html(domhtml);
 				resizer();
 			};
@@ -151,15 +152,15 @@
 			});
 			
 			$("#table-container").click(function () {
-				_.storage.set("rollcall_store_html", $("#table-container").html());
+				_.storage.set("rollcall_store_html_" + window.location.search.replace("?", ""), $("#table-container").html());
 			});
 			
 			$("#del_all").click(function () {
-				if (confirm("你真的要删除吗？")) _.storage.del("rollcall_store_html"), location.reload();
+				if (confirm("你真的要删除吗？")) _.storage.del("rollcall_store_html_" + window.location.search.replace("?", "")), location.reload();
 			});
 			
 			$("#export").click(function () {
-				_.storage.set("rollcall_store_html", $("#table-container").html());
+				_.storage.set("rollcall_store_html_" + window.location.search.replace("?", ""), $("#table-container").html());
 				let sss = "";
 				$("td:not(.td-sel)").each(function (k, v) {
 					sss += (k,v.innerHTML.replace("<br>", " ")) + "\n";
