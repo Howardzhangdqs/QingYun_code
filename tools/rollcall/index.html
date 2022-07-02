@@ -119,8 +119,8 @@
 					$("#table-container").append(domstr.template.table.replace("{{classid}}", d[0]));
 					$("[h-classid=" + d[0] + "] > tbody").append("<tr></tr>".times(5));
 					for (let i = 1; i < d.length; i ++) {
-						let d = (Math.floor((i - 1) / 10) + 1); d = (d > 5 ? 5 : d);
-						$("[h-classid=" + d[0] + "] > tbody > tr:nth-child(" + d + ")")
+						let tt = (Math.floor((i - 1) / 10) + 1); tt = (tt > 5 ? 5 : tt);
+						$("[h-classid=" + d[0] + "] > tbody > tr:nth-child(" + tt + ")")
 							.append("<td>" + d[0] + "</br>" + d[i].split(" ").slice(0, 2).join(" ") + "</td>");
 					}
 				}
