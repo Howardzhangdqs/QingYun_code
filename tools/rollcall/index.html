@@ -97,6 +97,8 @@
 		<button id="del_all" style="">删除全部数据</button>
 		
 		<script>
+			var locstor = window.location.search.replace("?", "") == "tl3z-6" ? "rollcall_store_html" : "rollcall_store_html_" + window.location.search.replace("?", "");
+		
 			String.prototype.times = function(n) { return (new Array(n + 1)).join(this) };
 			
 			var domstr = {
@@ -126,7 +128,7 @@
 				}
 				console.log(data);
 				$("[h-classid=" + data[0][0] + "]").addClass("selected");
-				let domhtml = _.storage.get("rollcall_store_html_" + window.location.search.replace("?", ""));
+				let domhtml = _.storage.get(locstor);
 				if (domhtml) $("#table-container").html(domhtml);
 				resizer();
 			};
@@ -152,15 +154,15 @@
 			});
 			
 			$("#table-container").click(function () {
-				_.storage.set("rollcall_store_html_" + window.location.search.replace("?", ""), $("#table-container").html());
+				_.storage.set(locstor, $("#table-container").html());
 			});
 			
 			$("#del_all").click(function () {
-				if (confirm("你真的要删除吗？")) _.storage.del("rollcall_store_html_" + window.location.search.replace("?", "")), location.reload();
+				if (confirm("你真的要删除吗？")) _.storage.del(locstor), location.reload();
 			});
 			
 			$("#export").click(function () {
-				_.storage.set("rollcall_store_html_" + window.location.search.replace("?", ""), $("#table-container").html());
+				_.storage.set(locstor, $("#table-container").html());
 				let sss = "";
 				$("td:not(.td-sel)").each(function (k, v) {
 					sss += (k,v.innerHTML.replace("<br>", " ")) + "\n";
