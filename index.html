@@ -25,6 +25,13 @@
 					}],
                     ['Js.dependency', 'assets/js/breakpoints.min.js', ['Js#mainjs', 'assets/js/main.min.js', {fatherlist: [".dependency"]}]],
                     ['Js.dependency', 'assets/js/util.min.js'], ['Js', 'assets/js/header.min.js'],
+					['Js', 'assets/js/tilt.min.js', function () {
+						$(".image.fit > img").tilt({
+							scale: 1.05,
+							perspective: 800,
+							axis: "x",
+						});
+					}],
 					['Js', 'https://cdn.staticfile.org/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js']
                 ]],
 				['Js', 'https://cdn.staticfile.org/vue/2.6.9/vue.min.js',
@@ -67,7 +74,7 @@
                 <header class="major" style="text-align:center;margin: 0 0 2em 0"><h2>班级特色</h2></header>
                 <div class="row gtr-150">
                     <div class="col-6 col-12-medium"><ul class="major-icons"><li><span class="image fit">
-						<img data-original="images/flag.png" alt="" loaded="images/flag.minn.png"/>
+						<img data-tilt data-original="images/flag.png" alt="" loaded="images/flag.minn.png"/>
 					</span></li></ul></div>
                     <div class="col-6 col-12-medium">
                         <header class="major"><h3>班徽与口号</h3></header>
